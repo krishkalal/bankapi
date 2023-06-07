@@ -12,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @Table(name="Customer")
@@ -26,7 +27,7 @@ public class Customer {
     @Column(name = "Email",nullable = false,length = 150)
     private String email;
     @Column(name = "Password",nullable = false,length = 10)
-    private String Password;
+    private String password;
     @Column(name = "Contact_No")
     private long contactNo;
 }
