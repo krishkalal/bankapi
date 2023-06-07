@@ -1,0 +1,18 @@
+mutation($individualInput:IndividualInput){
+  addIndividual(individualInput:$individualInput){
+    accountNo
+  }
+}
+variables
+{"individualInput": {
+  "name": {
+    "firstName": "xyz",
+    "lastName": "qwer",
+    "middleName":"bnbn"
+  },
+  "email": "1efkk@gmail.com",
+  "dob": "1994-09-27",
+  "password": "Test@123",
+  "contactNo": 1234567890,
+  "accountNo": 0
+}}
