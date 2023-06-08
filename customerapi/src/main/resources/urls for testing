@@ -1,0 +1,7 @@
+http://localhost:8765/api/customers -- test api gateway
+http://localhost:7074/graphiql - graphql
+http://localhost:8761/ - eureka discovery client
+http://localhost:8765/api/customers/individuals/v1.0/?userName=eswaribala&userPwd=Test@123 - test for customer api jwt -it will display all data
+
+http://localhost:8765/api/customers/individuals/v1.0/1?useName=Krishkalal&userPwd=Test@123 - it will display sigle data or using id -put id before credentials
+http://localhost:8765/api/customers/individuals/v1.0/email/kr45rkk@gmail.com?useName=Krishkalal&userPwd=Test@123 - using email
