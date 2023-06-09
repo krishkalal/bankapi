@@ -41,7 +41,7 @@ public class IndivdualController {
     public List<Individual> getIndividuals(){
 
 
-        return this.individualService.getAllIndividuals();
+            return this.individualService.getAllIndividuals();
     }
     @GetMapping({"/v1.0/{accountNo}"})
     public ResponseEntity<ResponseWrapper> getIndividualById(@PathVariable("accountNo") long accountNo){
@@ -88,7 +88,7 @@ public class IndivdualController {
     public ResponseEntity<ResponseWrapper> deleteIndividualById(@PathVariable("accountNo") long accountNo){
 
         if(this.individualService.deleteIndividualById(accountNo)){
-            return  ResponseEntity.status(HttpStatus.OK).body(
+           return  ResponseEntity.status(HttpStatus.OK).body(
                     new ResponseWrapper("Individual Object "+accountNo +"deleted"));
         }
         else
