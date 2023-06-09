@@ -1,0 +1,670 @@
+Microsoft Windows [Version 10.0.19042.1348]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\krishnakant>kubectl apply -f mysql-deployment-boa.yaml
+error: the path "mysql-deployment-boa.yaml" does not exist
+
+C:\krishnakant>kubectl apply -f mysql-deployment-boa.yml
+service/mysqlservice created
+deployment.apps/mysql-app created
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-bstfq   1/1     Running   0          13s
+
+C:\krishnakant>kubectl svc
+Error: unknown command "svc" for "kubectl"
+
+Did you mean this?
+        set
+
+Run 'kubectl --help' for usage.
+
+C:\krishnakant>kubectl get svc
+NAME           TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)    AGE
+kubernetes     ClusterIP   10.96.0.1    <none>        443/TCP    6d17h
+mysqlservice   ClusterIP   None         <none>        3306/TCP   40s
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-bstfq   1/1     Running   0          52s
+
+C:\krishnakant>kubectl describe pod mysql-app-7566c9cc95-bstfq
+Name:         mysql-app-7566c9cc95-bstfq
+Namespace:    default
+Priority:     0
+Node:         docker-desktop/192.168.65.4
+Start Time:   Fri, 09 Jun 2023 11:05:27 +0530
+Labels:       app=mysql-app
+              pod-template-hash=7566c9cc95
+Annotations:  <none>
+Status:       Running
+IP:           10.1.0.18
+IPs:
+  IP:           10.1.0.18
+Controlled By:  ReplicaSet/mysql-app-7566c9cc95
+Containers:
+  mysql:
+    Container ID:   docker://949bc108997ac35494d82d7c64c896954a6327c9c6fdc6f4f2b91ccca5bb29c5
+    Image:          mysql:8
+    Image ID:       docker-pullable://mysql@sha256:4bae98614cd6ad1aecbdd32ff1b37b93fb0ee22b069469e7bc9679bacef1abd2
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 09 Jun 2023 11:05:31 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-d2hp4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-d2hp4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  5m23s  default-scheduler  Successfully assigned default/mysql-app-7566c9cc95-bstfq to docker-desktop
+  Normal  Pulling    5m21s  kubelet            Pulling image "mysql:8"
+  Normal  Pulled     5m19s  kubelet            Successfully pulled image "mysql:8" in 2.2050806s
+  Normal  Created    5m19s  kubelet            Created container mysql
+  Normal  Started    5m19s  kubelet            Started container mysql
+
+C:\krishnakant>kubectl describe pod mysql-app-7566c9cc95-bstfq
+Name:         mysql-app-7566c9cc95-bstfq
+Namespace:    default
+Priority:     0
+Node:         docker-desktop/192.168.65.4
+Start Time:   Fri, 09 Jun 2023 11:05:27 +0530
+Labels:       app=mysql-app
+              pod-template-hash=7566c9cc95
+Annotations:  <none>
+Status:       Running
+IP:           10.1.0.18
+IPs:
+  IP:           10.1.0.18
+Controlled By:  ReplicaSet/mysql-app-7566c9cc95
+Containers:
+  mysql:
+    Container ID:   docker://949bc108997ac35494d82d7c64c896954a6327c9c6fdc6f4f2b91ccca5bb29c5
+    Image:          mysql:8
+    Image ID:       docker-pullable://mysql@sha256:4bae98614cd6ad1aecbdd32ff1b37b93fb0ee22b069469e7bc9679bacef1abd2
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 09 Jun 2023 11:05:31 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-d2hp4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-d2hp4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  7m31s  default-scheduler  Successfully assigned default/mysql-app-7566c9cc95-bstfq to docker-desktop
+  Normal  Pulling    7m29s  kubelet            Pulling image "mysql:8"
+  Normal  Pulled     7m27s  kubelet            Successfully pulled image "mysql:8" in 2.2050806s
+  Normal  Created    7m27s  kubelet            Created container mysql
+  Normal  Started    7m27s  kubelet            Started container mysql
+
+C:\krishnakant>kubectl exec -it mysql-app-7566c9cc95-bstfq /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+bash-4.4# exit
+exit
+
+C:\krishnakant>kubectl exec  mysql-app-7566c9cc95-bstfq -it /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+bash-4.4# exit
+exit
+
+C:\krishnakant>kubectl exec  mysql-app-7566c9cc95-bstfq --it /bin/bash
+Error: unknown flag: --it
+See 'kubectl exec --help' for usage.
+
+C:\krishnakant>kubectl exec  mysql-app-7566c9cc95-bstfq -- /bin/bash
+
+C:\krishnakant>kubectl exec -it mysql-app-7566c9cc95-bstfq /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+bash-4.4# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database boams1jun2023customerdb;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create database boams1jun2023customerdb' at line 2
+mysql> create database boams1jun2023customerdb ;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> exit
+Bye
+bash-4.4# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| boams1jun2023customerdb |
+| information_schema      |
+| mysql                   |
+| performance_schema      |
+| sys                     |
++-------------------------+
+5 rows in set (0.02 sec)
+
+mysql> exit
+Bye
+bash-4.4# exit
+exit
+
+C:\krishnakant>kubectl exec -it mysql-app-7566c9cc95-bstfq /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+bash-4.4# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| boams1jun2023customerdb |
+| information_schema      |
+| mysql                   |
+| performance_schema      |
+| sys                     |
++-------------------------+
+5 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+bash-4.4# exit
+exit
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy created
+service/customerservice created
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS      AGE
+customerdeploy-5844f6cff8-t4jmq   0/1     Error     1 (17s ago)   33s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0             18m
+
+C:\krishnakant>kubectl get svc
+NAME              TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+customerservice   LoadBalancer   10.98.57.182   localhost     7074:32024/TCP   41s
+kubernetes        ClusterIP      10.96.0.1      <none>        443/TCP          6d17h
+mysqlservice      ClusterIP      None           <none>        3306/TCP         18m
+
+C:\krishnakant>kubectl get deploy
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+customerdeploy   1/1     1            1           55s
+mysql-app        1/1     1            1           18m
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy configured
+service/customerservice configured
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS             RESTARTS      AGE
+customerdeploy-5844f6cff8-t4jmq   0/1     CrashLoopBackOff   4 (24s ago)   3m6s
+mysql-app-7566c9cc95-bstfq        1/1     Running            0             20m
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy configured
+service/customerservice configured
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS             RESTARTS      AGE
+customerdeploy-5844f6cff8-t4jmq   0/1     CrashLoopBackOff   5 (13s ago)   4m28s
+mysql-app-7566c9cc95-bstfq        1/1     Running            0             22m
+
+C:\krishnakant>kubectl get deploy
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+customerdeploy   0/1     1            0           4m36s
+mysql-app        1/1     1            1           22m
+
+C:\krishnakant>kubectl delete deploy customerdeploy
+deployment.apps "customerdeploy" deleted
+
+C:\krishnakant>kubectl delete svc customerservice
+service "customerservice" deleted
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-bstfq   1/1     Running   0          23m
+
+C:\krishnakant>docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy created
+service/customerservice created
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-qq9mk   1/1     Running   0          3s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0          26m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS      AGE
+customerdeploy-78999b9bc7-qq9mk   0/1     Error     1 (18s ago)   32s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0             27m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS      AGE
+customerdeploy-78999b9bc7-qq9mk   1/1     Running   2 (17s ago)   44s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0             27m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS      AGE
+customerdeploy-78999b9bc7-qq9mk   0/1     Error     2 (35s ago)   62s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0             27m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS             RESTARTS      AGE
+customerdeploy-78999b9bc7-qq9mk   0/1     CrashLoopBackOff   3 (17s ago)   109s
+mysql-app-7566c9cc95-bstfq        1/1     Running            0             28m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS             RESTARTS      AGE
+customerdeploy-78999b9bc7-qq9mk   0/1     CrashLoopBackOff   4 (18s ago)   2m55s
+mysql-app-7566c9cc95-bstfq        1/1     Running            0             29m
+
+C:\krishnakant>kubectl delete svc customerservice
+service "customerservice" deleted
+
+C:\krishnakant>kubectl delete deploy customerdeploy
+deployment.apps "customerdeploy" deleted
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-bstfq   1/1     Running   0          30m
+
+C:\krishnakant>docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy created
+service/customerservice created
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-ld7nc   1/1     Running   0          4s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0          31m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-ld7nc   1/1     Running   0          8s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0          31m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-ld7nc   1/1     Running   0          10s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0          31m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS             RESTARTS      AGE
+customerdeploy-78999b9bc7-ld7nc   0/1     CrashLoopBackOff   1 (12s ago)   40s
+mysql-app-7566c9cc95-bstfq        1/1     Running            0             31m
+
+C:\krishnakant>kubectl delete svc mysqlservice
+service "mysqlservice" deleted
+
+C:\krishnakant>kubectl delete deploy mysqlservice
+Error from server (NotFound): deployments.apps "mysqlservice" not found
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS       AGE
+customerdeploy-78999b9bc7-ld7nc   0/1     Error     5 (102s ago)   4m6s
+mysql-app-7566c9cc95-bstfq        1/1     Running   0              35m
+
+C:\krishnakant>kubectl delete deploy mysqlservice
+Error from server (NotFound): deployments.apps "mysqlservice" not found
+
+C:\krishnakant>kubectl get deploy
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+customerdeploy   0/1     1            0           5m46s
+mysql-app        1/1     1            1           36m
+
+C:\krishnakant>kubectl delete deploy mysql-app
+deployment.apps "mysql-app" deleted
+
+C:\krishnakant>kubectl delete deploy customerdeploy
+deployment.apps "customerdeploy" deleted
+
+C:\krishnakant>kubectl apply -f mysql-deployment-boa.yml
+service/mysql created
+deployment.apps/mysql-app created
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-fmwbh   1/1     Running   0          24s
+
+C:\krishnakant>kubectl describe pod mysql-app-7566c9cc95-fmwbh
+Name:         mysql-app-7566c9cc95-fmwbh
+Namespace:    default
+Priority:     0
+Node:         docker-desktop/192.168.65.4
+Start Time:   Fri, 09 Jun 2023 11:44:38 +0530
+Labels:       app=mysql-app
+              pod-template-hash=7566c9cc95
+Annotations:  <none>
+Status:       Running
+IP:           10.1.0.22
+IPs:
+  IP:           10.1.0.22
+Controlled By:  ReplicaSet/mysql-app-7566c9cc95
+Containers:
+  mysql:
+    Container ID:   docker://aefe7ac3b9c222fc59ffa394d3d4db9c9d48108b46deb98e78cd4cb22a4162e7
+    Image:          mysql:8
+    Image ID:       docker-pullable://mysql@sha256:4bae98614cd6ad1aecbdd32ff1b37b93fb0ee22b069469e7bc9679bacef1abd2
+    Port:           3306/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 09 Jun 2023 11:44:39 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      MYSQL_ROOT_PASSWORD:  password
+    Mounts:
+      /var/lib/mysql from mysql-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-tvg22 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  mysql-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  mysql-pv-claim
+    ReadOnly:   false
+  kube-api-access-tvg22:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  4m26s  default-scheduler  Successfully assigned default/mysql-app-7566c9cc95-fmwbh to docker-desktop
+  Normal  Pulled     4m25s  kubelet            Container image "mysql:8" already present on machine
+  Normal  Created    4m25s  kubelet            Created container mysql
+  Normal  Started    4m25s  kubelet            Started container mysql
+
+C:\krishnakant>kubectl get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+mysql-app-7566c9cc95-fmwbh   1/1     Running   0          78s
+
+C:\krishnakant>kubectl get deploy
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+mysql-app   1/1     1            1           100s
+
+C:\krishnakant>kubectl exec -it mysql-app-7566c9cc95-bstfq /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+Error from server (NotFound): pods "mysql-app-7566c9cc95-bstfq" not found
+
+C:\krishnakant>kubectl exec  mysql-app-7566c9cc95-fmwbh --it /bin/bash
+Error: unknown flag: --it
+See 'kubectl exec --help' for usage.
+
+C:\krishnakant>kubectl exec -it mysql-app-7566c9cc95-fmwbh /bin/bash
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+bash-4.4# mysql -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database boams1jun2023customerdb ;
+ERROR 1007 (HY000): Can't create database 'boams1jun2023customerdb'; database exists
+mysql> show databases ;
++-------------------------+
+| Database                |
++-------------------------+
+| boams1jun2023customerdb |
+| information_schema      |
+| mysql                   |
+| performance_schema      |
+| sys                     |
++-------------------------+
+5 rows in set (0.01 sec)
+
+mysql> exit ;
+Bye
+bash-4.4# exit ;
+exit
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml ;
+error: Unexpected args: [;]
+See 'kubectl apply -h' for help and examples
+
+C:\krishnakant>kubectl apply -f deployment-v19.yml
+deployment.apps/customerdeploy created
+service/customerservice configured
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          8s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          6m55s
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          10s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          6m57s
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          12s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          6m59s
+
+C:\krishnakant>kubectl scale --replicas=2 deployment customerdeploy
+deployment.apps/customerdeploy scaled
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-8zplv   1/1     Running   0          4s
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          84s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          8m11s
+
+C:\krishnakant>kubectl get rs
+NAME                        DESIRED   CURRENT   READY   AGE
+customerdeploy-78999b9bc7   2         2         2       95s
+mysql-app-7566c9cc95        1         1         1       8m22s
+
+C:\krishnakant>kubectl scale --replicas=1 deployment customerdeploy
+deployment.apps/customerdeploy scaled
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          2m26s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          9m13s
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          2m37s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          9m24s
+
+C:\krishnakant>kubectl autoscale deployment customerdeployment --min=1 --max=4 --cpu-percent=20
+Error from server (NotFound): deployments.apps "customerdeployment" not found
+
+C:\krishnakant>kubectl autoscale deployment customerdeploy --min=1 --max=4 --cpu-percent=20
+horizontalpodautoscaler.autoscaling/customerdeploy autoscaled
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m25s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m26s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m27s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m28s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m29s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m30s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m31s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m32s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m33s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m33s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+customerdeploy-78999b9bc7-pxp9t   1/1     Running   0          4m34s
+mysql-app-7566c9cc95-fmwbh        1/1     Running   0          11m
+
+C:\krishnakant>kubectl get deploy
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+customerdeploy   1/1     1            1           4m45s
+mysql-app        1/1     1            1           11m
+
+C:\krishnakant>kubectl delete hpa customerdeploy
+horizontalpodautoscaler.autoscaling "customerdeploy" deleted
+
+C:\krishnakant>kubectl delete deploy customerdeploy
+deployment.apps "customerdeploy" deleted
+
+C:\krishnakant>kubectl delete svc mysql
+service "mysql" deleted
+
+C:\krishnakant>kubectl delete svc customerdeploy
+Error from server (NotFound): services "customerdeploy" not found
+
+C:\krishnakant>kubectl delete deploy customerdeploy
+Error from server (NotFound): deployments.apps "customerdeploy" not found
+
+C:\krishnakant>kubectl delete deploy mysql-app
+deployment.apps "mysql-app" deleted
+
+C:\krishnakant>kubectl delete svc customerservice
+service "customerservice" deleted
+
+C:\krishnakant>
