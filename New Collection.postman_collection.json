@@ -1,0 +1,1138 @@
+{
+	"info": {
+		"_postman_id": "8f637601-7157-47ea-83d1-feba8e7eeaa0",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27900925"
+	},
+	"item": [
+		{
+			"name": "Microservice",
+			"item": [
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/email/kr45rkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/email/kr45rkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"email",
+								"kr45rkk@gmail.com"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								""
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/email/kk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/email/kk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"email",
+								"kk@gmail.com"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/email/kkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/email/kkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"email",
+								"kkk@gmail.com"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/kkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/kkk@gmail.com?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"kkk@gmail.com"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								""
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"testuser\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/?useName=testuser&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/?useName=testuser&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								""
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "testuser"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"1"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=testuser&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=testuser&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"1"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "testuser"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/1?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								"1"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/?useName=Krishkalal&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								""
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "Krishkalal"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers/individuals/v1.0/?useName=eswaribala&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers/individuals/v1.0/?useName=eswaribala&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers",
+								"individuals",
+								"v1.0",
+								""
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "eswaribala"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8765/api/customers?useName=eswaribala&userPwd=Test@123",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/api/customers?useName=eswaribala&userPwd=Test@123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"api",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "useName",
+									"value": "eswaribala"
+								},
+								{
+									"key": "userPwd",
+									"value": "Test@123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLcmlzaGthbGFsIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE5NjIsImV4cCI6MTY4NjIwMjE0Mn0.oXidrUJ1L6KgN-gq7eMBZgGRbGm4vUC5DZJ80_uVfL5MRQs_yRilY9DecExZcYqoKE-tp6mLY1ry37IcpOH53A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"Krishkalal\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLcmlzaGthbGFsIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE4NzYsImV4cCI6MTY4NjIwMjA1Nn0.gfCQoX_1swdd0j8ywUF3AflPSb3UyInhnG6xj2g_CMiF5JZ2FWNIBDeJEZpMmpOAhwTNbiOhyb9p_Rr2Mc-aFQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"Krishkalal\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLcmlzaGthbGFsIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE1MjcsImV4cCI6MTY4NjIwMTcwN30.kwJ709q8yYHZ5AU8eG6VOG93BCDoWe0xDIfR0LJU71UGBMBEuLIy4dWIwQlCwm3gFyaQ0SkGqYA36RgSqgzNUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLcmlzaGthbGFsIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE1MjcsImV4cCI6MTY4NjIwMTcwN30.kwJ709q8yYHZ5AU8eG6VOG93BCDoWe0xDIfR0LJU71UGBMBEuLIy4dWIwQlCwm3gFyaQ0SkGqYA36RgSqgzNUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE3MzAsImV4cCI6MTY4NjIwMTkxMH0.vozRSpV2pW_YBR4wqmoQZtHOQJmjllETjbUYEg_1Sji4SkQZLSusuiHoIhhREInPf0rfn1pH4U5PPUDPWaOYVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0dXNlciIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE3MzAsImV4cCI6MTY4NjIwMTkxMH0.vozRSpV2pW_YBR4wqmoQZtHOQJmjllETjbUYEg_1Sji4SkQZLSusuiHoIhhREInPf0rfn1pH4U5PPUDPWaOYVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"testuser\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"testuser\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/greet/admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJLcmlzaGthbGFsIiwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJpYXQiOjE2ODYyMDE1MjcsImV4cCI6MTY4NjIwMTcwN30.kwJ709q8yYHZ5AU8eG6VOG93BCDoWe0xDIfR0LJU71UGBMBEuLIy4dWIwQlCwm3gFyaQ0SkGqYA36RgSqgzNUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/greet/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"greet",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"Krishkalal\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"Krishkalal\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"Krishkalal\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[{\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_ADMIN\"\r\n    },\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9091/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"Krishkalal\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://localhost:9091/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"userName\":\"eswaribala\",\r\n    \"userPwd\":\"Test@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9091/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"eswaribala\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[{\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_ADMIN\"\r\n    },\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST http://localhost:9091/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"eswaribala\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[{\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_ADMIN\"\r\n    },\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "POST http://localhost:9091/signup",
+					"protocol": "POST http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST http://localhost:9091/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"eswaribala\",\r\n    \"password\":\"Test@123\",\r\n    \"roles\":[{\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_ADMIN\"\r\n    },\r\n\r\n    {\r\n        \"roleId\":\"0\",\r\n        \"roleName\":\"ROLE_USER\"\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "POST http://localhost:9091/signup",
+					"protocol": "POST http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:7074/actuator/bus-refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/actuator/bus-refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"actuator",
+						"bus-refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
